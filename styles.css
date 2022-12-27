@@ -1,0 +1,149 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+:root {
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+    --purple: hsl(280, 64%, 44%);
+    --gray: hsl(0, 0%, 95%);
+    --white: hsla(0, 0%, 100%, 0.75);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 207, 207);
+    min-height: 106vh;
+    line-height: 1.5;
+    color: white;
+    font-size: 18px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1.5rem;
+    max-width: 57.57rem;
+    height: 100%;
+    font-size: 18px;
+}
+
+.divs {
+    padding: 2.8rem;
+}
+
+
+.color {
+    border-radius: 8px 0px 0px 8px;
+    background-color: var(--orange);
+
+}
+
+.color1 {
+    background-color: var(--cyan);
+    border-radius: 0%;
+}
+
+.color2 {
+    border-radius: 0px 8px 8px 0px;
+    background-color: var(--dark-cyan);
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.7rem;
+    margin-bottom: 18px;
+    color: var(--gray);
+}
+
+button {
+    border: none;
+    border-radius: 25px;
+    background-color: var(--gray);
+    padding: 14px;
+    width: 145px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    color: gray;
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 50px;
+    font-size: 15px;
+    color: var(--white);
+    line-height: 1.7;
+}
+
+span {
+    font-weight: 700;
+}
+
+.image {
+    margin-bottom: 4px;
+}
+
+button:hover {
+    background-color: transparent;
+    border: 1px solid var(--white);
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .divs:hover {
+        padding-inline: 55px;
+        transition: all ease 0.5s;
+        filter: brightness(1.1);
+        transform: scale(1.03);
+    }
+
+}
+@media (max-width: 618px) {
+    .container
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .color
+    {
+        border-radius: 8px 8px 0px 0px;
+    }
+    .color2
+    {
+        border-radius: 0px 0px 8px 8px;
+    }
+    
+    
+}
+@media (min-width: 618px) and (max-width: 698px){
+    .container
+    {
+        margin: 2.5rem;
+    }
+    
+}
+button.sp1
+{
+    color: var(--orange);
+}
+
+button.sp1:hover,button.sp2:hover,button.sp3:hover
+{
+    color: white;
+}
+button.sp2
+{
+    color: var(--cyan);
+}
+button.sp3
+{
+    color: var(--dark-cyan);
+}
